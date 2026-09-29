@@ -1,0 +1,6 @@
+{
+  "name": "Starlight Bookmarks - Visual Knowledge Map",
+  "description": "A private, visual bookmark manager that maps your saved links as an interactive constellation with progressive disclosure and instant search.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

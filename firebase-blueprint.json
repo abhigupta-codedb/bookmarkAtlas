@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "UserProfile": {
+      "collection": "users",
+      "path": "users/{userId}",
+      "description": "User profile information",
+      "fields": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "lastLoginAt": { "type": "timestamp" }
+      }
+    },
+    "Bookmark": {
+      "collection": "bookmarks",
+      "path": "users/{userId}/bookmarks/{bookmarkId}",
+      "description": "Saved bookmark links with metadata, collections and tags",
+      "fields": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string" },
+        "description": { "type": "string" },
+        "favicon": { "type": "string" },
+        "collectionIds": { "type": "array" },
+        "tags": { "type": "array" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "Collection": {
+      "collection": "collections",
+      "path": "users/{userId}/collections/{collectionId}",
+      "description": "Collections and subcollections for organizing bookmarks",
+      "fields": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "parentCollectionId": { "type": "string" },
+        "color": { "type": "string" },
+        "icon": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "Tag": {
+      "collection": "tags",
+      "path": "users/{userId}/tags/{tagId}",
+      "description": "Custom tags used by user",
+      "fields": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "color": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      }
+    }
+  }
+}
